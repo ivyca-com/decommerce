@@ -51,7 +51,7 @@ var tetherAddress = "0x8E74eda2453d206628Ca10b51E660F70298705Ce";
 var pageTitle = "DeCommerce";
 
 // A page description.
-var pageDescription = "Decentralized ecommerce platform for web 3.0";
+var pageDescription = "Decentralized ecommerce platform for Web3";
 
 // Logo Source
 var logoSrc = "images/logo.svg";
@@ -91,14 +91,6 @@ var processes_4_Desc = "The more user accessing a website the less bandwidth you
 // Banner bottom
 var bannerBottomImg = "images/banner-bottom.jpg";
 var bannerBottomLink = "help.html#nftdomains";
-
-// Text in the footer
-var footerText = "Powered by DeCommerce. Application version 1.0.0";
-var footerLink = "help.html#about-us";
-
-// Logo in the footer
-var footerLogoImg = "images/we-accept.svg";
-var footerLogoLink = "help.html#payments";
 
 
 

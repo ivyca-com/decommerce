@@ -2,6 +2,11 @@
 // - Main elements
 // ********************
 
+// If you own a purchase code for DeCommerce Premium. Enter it here.
+// For Free version, leave the variable empty.
+// Learn More: https://www.ivyca.com/decommerce/download.html
+var purchaseCode = "";
+
 // https://www.staticforms.xyz/ - Access Key: replace here
 var emailAccessKey = "c3c0f26e-369c-4a84-9368-cfb04234b485";
 
@@ -30,14 +35,17 @@ var shippingCosts = 10;
 // Address Test: https://xmr.llcoins.net/addresstests.html
 var moneroAddress = "44J1eG83mrNYyNQzR5QkCwAPkPMVVqAZ4eH2sRZuwpFSMvCHW1m24PmSxodG8TVdk3DENGuzLq7muABLM1RtYmRfLpT3TYB";
 
-// Bitcoin Address
+// Your Bitcoin public address where you get paid.
+// Only Premium. Learn More: https://www.ivyca.com/decommerce/download.html
 var bitcoinAddress = "bc1qvu9y6xr22wlakdy3e7ck5encd5plgajemmup7z";
 
-// Ethereum Address (Simple receiving address)
+// Your Ethereum public address where you get paid.
+// Only Premium. Learn More: https://www.ivyca.com/decommerce/download.html
 var ethereumAddress = "0x8E74eda2453d206628Ca10b51E660F70298705Ce";
 
-// Tether Address (Simple receiving address)
+// Your Tether public address where you get paid.
 // Tether USD (USDT) is an ERC20 token. You can receive tokens directly on an Ethereum account (You can use your Ethereum Address).
+// Only Premium. Learn More: https://www.ivyca.com/decommerce/download.html
 var tetherAddress = "0x8E74eda2453d206628Ca10b51E660F70298705Ce";
 
 

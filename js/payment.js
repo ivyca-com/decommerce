@@ -1,40 +1,67 @@
-if (selectedCurrency == "USD") {
-    currencySign = "USD";
-    currencyHint = "U.S. Dollar (USD)";
-    currencyClass = "usd-sign"; // Just for CSS purposes (pseudo element)
-    currencyFormNameTag = "$Monero Integrated Address"; // Used in submission form
-    genCryptoAddress = genMoneroIntegratedAddress;
+// ****************************************
+// - Premium version
+// ****************************************
+if (purchaseCode == "c3c0f26e-369c-4a84-9368") {
 
-} else if (selectedCurrency == "XMR") {
-    currencySign = "XMR";
-    currencyHint = "Monero (XMR)";
-    currencyClass = "xmr-sign"; // Just for CSS purposes (pseudo element)
-    currencyFormNameTag = "$Monero Integrated Address"; // Used in submission form
-    genCryptoAddress = genMoneroIntegratedAddress;
-    
-} else if (selectedCurrency == "BTC") {
-    currencySign = "BTC";
-    currencyHint = "Bitcoin (BTC)";
-    currencyClass = "btc-sign"; // Just for CSS purposes (pseudo element)
-    currencyFormNameTag = "$Bitcoin Address"; // Used in submission form
-    genCryptoAddress = genBitcoinAddress;
+    if (selectedCurrency == "USD") {
+        currencySign = "USD";
+        currencyHint = "U.S. Dollar (USD)";
+        currencyClass = "usd-sign"; // Just for CSS purposes (pseudo element)
+        currencyFormNameTag = "$Monero Integrated Address"; // Used in submission form
+        genCryptoAddress = genMoneroIntegratedAddress;
 
-} else if (selectedCurrency == "ETH") {
-    currencySign = "ETH";
-    currencyHint = "Ethereum (ETH)";
-    currencyClass = "eth-sign"; // Just for CSS purposes (pseudo element)
-    currencyFormNameTag = "$Ethereum Address"; // Used in submission form
-    genCryptoAddress = genEthereumAddress;
+    } else if (selectedCurrency == "XMR") {
+        currencySign = "XMR";
+        currencyHint = "Monero (XMR)";
+        currencyClass = "xmr-sign"; // Just for CSS purposes (pseudo element)
+        currencyFormNameTag = "$Monero Integrated Address"; // Used in submission form
+        genCryptoAddress = genMoneroIntegratedAddress;
 
-} else if (selectedCurrency == "USDT") {
-    currencySign = "USDT";
-    currencyHint = "Tether (USDT)";
-    currencyClass = "usdt-sign"; // Just for CSS purposes (pseudo element)
-    currencyFormNameTag = "$Tether (Token) Address"; // Used in submission form
-    genCryptoAddress = genTetherAddress;
+    } else if (selectedCurrency == "BTC") {
+        currencySign = "BTC";
+        currencyHint = "Bitcoin (BTC)";
+        currencyClass = "btc-sign"; // Just for CSS purposes (pseudo element)
+        currencyFormNameTag = "$Bitcoin Address"; // Used in submission form
+        genCryptoAddress = genBitcoinAddress;
 
+    } else if (selectedCurrency == "ETH") {
+        currencySign = "ETH";
+        currencyHint = "Ethereum (ETH)";
+        currencyClass = "eth-sign"; // Just for CSS purposes (pseudo element)
+        currencyFormNameTag = "$Ethereum Address"; // Used in submission form
+        genCryptoAddress = genEthereumAddress;
+
+    } else if (selectedCurrency == "USDT") {
+        currencySign = "USDT";
+        currencyHint = "Tether (USDT)";
+        currencyClass = "usdt-sign"; // Just for CSS purposes (pseudo element)
+        currencyFormNameTag = "$Tether (Token) Address"; // Used in submission form
+        genCryptoAddress = genTetherAddress;
+
+    } else {
+        alert("Please correct the variable 'selectedCurrency' in the file config.js. DeCommerce supports only XMR, BTC, ETH, USDT, and  USD.");
+    }
+// ****************************************
+// - Free version
+// ****************************************
 } else {
-    alert("Please correct the variable 'selectedCurrency' in the file config.js. DeCommerce supports only XMR, BTC, ETH, USDT, and  USD.");
+    if (selectedCurrency == "USD") {
+        currencySign = "USD";
+        currencyHint = "U.S. Dollar (USD)";
+        currencyClass = "usd-sign"; // Just for CSS purposes (pseudo element)
+        currencyFormNameTag = "$Monero Integrated Address"; // Used in submission form
+        genCryptoAddress = genMoneroIntegratedAddress;
+
+    } else if (selectedCurrency == "XMR") {
+        currencySign = "XMR";
+        currencyHint = "Monero (XMR)";
+        currencyClass = "xmr-sign"; // Just for CSS purposes (pseudo element)
+        currencyFormNameTag = "$Monero Integrated Address"; // Used in submission form
+        genCryptoAddress = genMoneroIntegratedAddress;
+
+    } else {
+        alert("Please correct the variable 'selectedCurrency' in the file config.js. DeCommerce FREE supports only: XMR or USD.");
+    }
 }
 
 

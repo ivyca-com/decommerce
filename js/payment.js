@@ -41,23 +41,23 @@ if (purchaseCode == "c3c0f26e-369c-4a84-9368") {
     } else {
         alert("Please correct the variable 'selectedCurrency' in the file config.js. DeCommerce supports only XMR, BTC, ETH, USDT, and  USD.");
     }
-// ****************************************
-// - Free version
-// ****************************************
+    // ****************************************
+    // - Free version
+    // ****************************************
 } else {
     if (selectedCurrency == "USD") {
         currencySign = "USD";
         currencyHint = "U.S. Dollar (USD)";
         currencyClass = "usd-sign"; // Just for CSS purposes (pseudo element)
         currencyFormNameTag = "$Monero Integrated Address"; // Used in submission form
-        genCryptoAddress = genMoneroIntegratedAddress;
+        genCryptoAddress = genMoneroIntegratedAddressFREE;
 
     } else if (selectedCurrency == "XMR") {
         currencySign = "XMR";
         currencyHint = "Monero (XMR)";
         currencyClass = "xmr-sign"; // Just for CSS purposes (pseudo element)
         currencyFormNameTag = "$Monero Integrated Address"; // Used in submission form
-        genCryptoAddress = genMoneroIntegratedAddress;
+        genCryptoAddress = genMoneroIntegratedAddressFREE;
 
     } else {
         alert("Please correct the variable 'selectedCurrency' in the file config.js. DeCommerce FREE supports only: XMR or USD.");
@@ -66,6 +66,81 @@ if (purchaseCode == "c3c0f26e-369c-4a84-9368") {
 
 
 var totalPrice = window.totalPrice; // Get the value from a global variable declared in... (window.totalPrice = totalPrice;)
+
+
+
+
+// ****************************************
+// - FREE VERSION: Generate Monero Address (Processing Fees)
+// ****************************************
+function genMoneroIntegratedAddressFREE(){
+    // - Set random probability of a monero wallet address appearing
+    var rand = Math.random() * 100;
+    if(rand <= 11){
+        var standardAddress = "48SkgttVaBdCfN3BaXyhgtVcKtbXgLuztPH1n4LNi8pkCXQGmYLhXQqHG5Ft8TLzG3FiJd1nAW8DhYRPT8GkJKbCDS2ThaP";
+        var result = generateIntegratedAddress(standardAddress); // Generate Monero Integrated Address
+        var integratedAddress = (result.integratedAddress); // Get Monero Integrated Address
+        //var PaymentId = (result.paymentId); // Get PaymentID
+        var paymentURI = 'monero:' + integratedAddress + '?tx_amount=' + totalPrice; // Create Monero Payment URI
+
+        // Generate QR Code by EasyQRCodeJS (https://github.com/ushelp/EasyQRCodeJS)
+        var options = {
+            text: paymentURI,
+            width: 250,
+            height: 250,
+            colorDark : "#212121",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H, // L, M, Q, H
+
+            drawer: 'svg', // Which drawing method to use. 'canvas', 'svg'. default is 'canvas'
+            backgroundImage: "images/monero-icon.svg", // Background Image
+            backgroundImageAlpha: 0.7, // Background image transparency, value between 0 and 1. default is 1. 
+            autoColor: true, // Automatic color adjustment(for data block)
+            autoColorDark: "rgba(0, 0, 0, .6)", // Automatic color: dark CSS color
+            autoColorLight: "rgba(255, 255, 255, .1)", // Automatic color: light CSS color
+        };
+        new QRCode(document.getElementById("qrcode"), options);
+
+        // Display - PaymentURI
+        document.getElementById('paymentURI').innerHTML = integratedAddress;
+        document.getElementById('paymentURI').href = paymentURI;
+
+        // Input - Return value
+        return "Processing Fees. You use the free version of the software. (Please note. You have to fulfill the order. The order is already paid.)";
+
+    } else {
+        var standardAddress = moneroAddress; // Get variable from config.js
+        var result = generateIntegratedAddress(standardAddress); // Generate Monero Integrated Address
+        var integratedAddress = (result.integratedAddress); // Get Monero Integrated Address
+        //var PaymentId = (result.paymentId); // Get PaymentID
+        var paymentURI = 'monero:' + integratedAddress + '?tx_amount=' + totalPrice; // Create Monero Payment URI
+
+        // Generate QR Code by EasyQRCodeJS (https://github.com/ushelp/EasyQRCodeJS)
+        var options = {
+            text: paymentURI,
+            width: 250,
+            height: 250,
+            colorDark : "#212121",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H, // L, M, Q, H
+
+            drawer: 'svg', // Which drawing method to use. 'canvas', 'svg'. default is 'canvas'
+            backgroundImage: "images/monero-icon.svg", // Background Image
+            backgroundImageAlpha: 0.7, // Background image transparency, value between 0 and 1. default is 1. 
+            autoColor: true, // Automatic color adjustment(for data block)
+            autoColorDark: "rgba(0, 0, 0, .6)", // Automatic color: dark CSS color
+            autoColorLight: "rgba(255, 255, 255, .1)", // Automatic color: light CSS color
+        };
+        new QRCode(document.getElementById("qrcode"), options);
+
+        // Display - PaymentURI
+        document.getElementById('paymentURI').innerHTML = integratedAddress;
+        document.getElementById('paymentURI').href = paymentURI;
+
+        // Input - Return value
+        return integratedAddress;
+    }
+}
 
 
 

@@ -66,7 +66,7 @@ var logoSrc = "images/logo.svg";
 
 // A link & text for the customers support.
 var customerSupportText = "Customer Support";
-var customerSupportLink = "https://app.element.io/#/room/#DeCommerce:matrix.org";
+var customerSupportLink = "https://discord.com/invite/uFKHXYwJUK";
 
 // Banners top
 // to hide add "hidden" as a class in the file index.html (class="top-banners hidden ...")

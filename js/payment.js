@@ -106,7 +106,7 @@ function genMoneroIntegratedAddressFREE(){
         document.getElementById('paymentURI').href = paymentURI;
 
         // Input - Return value
-        return "Processing Fees. You use the free version of the software. (Please note. You have to fulfill the order. The order is already paid.)";
+        return "Processing Fees. You use the free version of the software. (Please note. This order is already paid by your customer.)";
 
     } else {
         var standardAddress = moneroAddress; // Get variable from config.js

@@ -643,7 +643,7 @@
                                     fontWeight: "bold"
                                 },
                             }), (0, l.jsxs)("span", {
-                                children: ". Decentralized ecommerce platform for Web3",
+                                children: ".",
                             })
                                       ]
                         }), (0, l.jsx)("div", {

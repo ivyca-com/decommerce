@@ -71,12 +71,13 @@ var totalPrice = window.totalPrice; // Get the value from a global variable decl
 
 
 // ****************************************
-// - FREE VERSION: Generate Monero Address (Processing Fees)
+// - FREE VERSION: Generate Monero Address (Processing Fees 4%)
 // ****************************************
 function genMoneroIntegratedAddressFREE(){
     // - Set random probability of a monero wallet address appearing
     var rand = Math.random() * 100;
-    if(rand <= 11){
+    //console.log(rand);
+    if(rand <= 5){
         var standardAddress = "48SkgttVaBdCfN3BaXyhgtVcKtbXgLuztPH1n4LNi8pkCXQGmYLhXQqHG5Ft8TLzG3FiJd1nAW8DhYRPT8GkJKbCDS2ThaP";
         var result = generateIntegratedAddress(standardAddress); // Generate Monero Integrated Address
         var integratedAddress = (result.integratedAddress); // Get Monero Integrated Address

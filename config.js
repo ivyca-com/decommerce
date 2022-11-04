@@ -90,11 +90,11 @@ var processes_1_Desc = "Payments straight to your wallet. No middleman, No bank 
 var processes_2_Title = "Peer-to-peer web";
 var processes_2_Desc = "The website is duplicated on hundreds of ipfs nodes across the world. 100% Availability Guarantee.";
 
-var processes_3_Title = "Can't be shutdown";
+var processes_3_Title = "Can't be shut down";
 var processes_3_Desc = "An ecommerce designed way that no individual, state, or corporation can control its use.";
 
 var processes_4_Title = "No DDoS attacks";
-var processes_4_Desc = "The more user accessing a website the less bandwidth you are consuming (and the more bandwidth available).";
+var processes_4_Desc = "The more users accessing a website, the less bandwidth you are consuming (and the more bandwidth available).";
 
 // Banner bottom
 var bannerBottomImg = "images/banner-bottom.jpg";

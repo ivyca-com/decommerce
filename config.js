@@ -2,7 +2,7 @@
 // - Main elements
 // ********************
 
-// If you own a purchase code for DeCommerce Premium. Enter it here.
+// If you own a purchase code for DeCommerce Premium. Enter it here:
 // For Free version, leave the variable empty.
 // Learn More: https://www.ivyca.com/decommerce/download.html
 var purchaseCode = "";
